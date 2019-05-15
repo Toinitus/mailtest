@@ -1,6 +1,27 @@
 <?php
 	require_once '../vendor/autoload.php';
 	session_start();
+
+if (isset($_SESSION['mail'])) 
+{
+	
+
+	unset($_SESSION['mail'])
+}else
+	{
+
+	$_SESSION['mail']	= 'test'
+	echo "refraichir la page pour votre surprise";
+	}
+
+
+
+
+
+
+
+
+
 function envoiMail($objet, $mailto, $msg, $cci = true)//:string
 {
 	require 'config.php';
