@@ -1,4 +1,6 @@
-<? php
+<?php
+	require_once '../vendor/autoload.php';
+	session_start();
 function envoiMail($objet, $mailto, $msg, $cci = true)//:string
 {
 	require 'config.php';
